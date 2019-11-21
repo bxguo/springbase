@@ -1,4 +1,4 @@
-package com.mvc.controller;
+package com.mvc;
 
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
@@ -9,7 +9,7 @@ import javax.servlet.ServletRegistration;
 
 /**
  * @author: bxguo
- * @time: 2019/11/20 14:16
+ * @time: 2019/11/21 15:51
  */
 public class MyWebApplicationInitializer implements WebApplicationInitializer {
 
@@ -20,11 +20,11 @@ public class MyWebApplicationInitializer implements WebApplicationInitializer {
         AnnotationConfigWebApplicationContext ac = new AnnotationConfigWebApplicationContext();
         ac.register(AppConfig.class);
         ac.refresh();
-        System.out.println("-----$&$&$&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&---------");
+
         // Create and register the DispatcherServlet
         DispatcherServlet servlet = new DispatcherServlet(ac);
         ServletRegistration.Dynamic registration = servletCxt.addServlet("app", servlet);
         registration.setLoadOnStartup(1);
-        registration.addMapping("/*");
+        registration.addMapping("*.do");
     }
 }
