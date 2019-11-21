@@ -7,7 +7,7 @@ import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 /**
  * @author: bxguo
- * @time: 2019/11/21 15:58
+ * @time: 2019/11/21 15:5
  */
 @Configuration
 @ComponentScan("com.mvc")
