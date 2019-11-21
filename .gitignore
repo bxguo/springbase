@@ -1,2 +1,21 @@
 # Project exclude paths
-/mvc1/target/
+.gradle/
+.idea/
+.settings/
+appcompat_v7/
+bin/
+build/
+gen/
+gradle/
+out/
+proguard/
+ship/
+target/
+.classpath
+.gitignore
+.idea
+.project
+.readme
+.update-config
+*.iml
+local.properties
